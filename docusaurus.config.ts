@@ -58,9 +58,9 @@ const config: Config = {
           editUrl:
             'https://github.com/TSGU-OSC/Tech-Docusaurus',
 
-          // 关闭文档相关检查3
-          remarkPlugins: [], // 清空 remark 插件
-          rehypePlugins: [], // 清空 rehype 插件
+          // // 关闭文档相关检查3
+          // remarkPlugins: [], // 清空 remark 插件
+          // rehypePlugins: [], // 清空 rehype 插件
         },
         blog: {
           showReadingTime: true,
@@ -90,11 +90,6 @@ const config: Config = {
     // 替换为您的专属社交卡片
     // 格式：image: 'img/docusaurus-social-card.jpg',
 
-    tableOfContents: {
-      minHeadingLevel: 3,
-      maxHeadingLevel: 3
-    },
-
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -105,6 +100,21 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        // 搜索框
+        {
+          type: 'search',
+          position: 'right', 
+        },
+
+        // 导航栏GitHub图标按钮     
+        {
+          href: 'https://github.com/TSGU-OSC/Tech-Docusaurus',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+        },
+        
+        // 侧边栏：排序 + 调整命名
         {
           type: 'doc',
           docId: 'Basic-Knowledge/1Overview',
@@ -166,6 +176,10 @@ const config: Config = {
         //   position: 'right',
         // },
       ],
+    },
+    sidebar: {
+      // 侧边栏收起按钮
+      hideable: true,
     },
     footer: {
       style: 'dark',
