@@ -11,24 +11,37 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  // 请参阅https://docusaurus.io/docs/api/docusaurus-config#future
+  // 未来特性flags，请参阅https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, 
+    // Improve compatibility with the upcoming Docusaurus v4
+    // 提前准备网站以适应即将到来的 Docusaurus 4 版本。
   },
 
   // Set the production url of your site here
+  // 在这里设置站点的生产url。
   url: 'https://your-docusaurus-site.example.com',
+
   // Set the /<baseUrl>/ pathname under which your site is served
+  // 设置你的站点所在的/<baseUrl>/路径名。
   // For GitHub pages deployment, it is often '/<projectName>/'
+  // 对于GitHub页面部署，通常是‘/<projectName>/’。
   baseUrl: '/',
 
   // GitHub pages deployment config.
+  // GitHub页面部署配置。
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // 如果你不使用GitHub页面，你不需要这些。
+  organizationName: 'TSGU-OSC', 
+  // Usually your GitHub org/user name.
+  // 通常是你的GitHub组织名/用户名。
+  projectName: 'Tech-Docusaurus', 
+  // Usually your repo name.
+  // 通常是你的仓库名。
 
   // 关闭文档相关检查1
   onBrokenLinks: 'ignore',
+  // 尽量避免文档中出现空、不完整或失效链接，调试时可适当使用。
   // onBrokenMarkdownLinks: 'ignore',
   onBrokenAnchors: 'ignore',
   onDuplicateRoutes: 'ignore',
@@ -40,11 +53,14 @@ const config: Config = {
   },
 
   // Even if you don't use internationalization, you can use this field to set
+  // 即使不使用国际化，你也可以使用这个字段来设置有用的元数据，如HTML语言。
   // useful metadata like html lang. For example, if your site is Chinese, you
+  // 例如，如果您的网站是中文的，
   // may want to replace "en" with "zh-Hans".
+  // 您就可能需要将“en”替换为“zh-Hans”。
   i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -54,9 +70,11 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
+          // 请将此处更改为您的仓库。
           // Remove this to remove the "edit this page" links.
+          // 删除下方链接以用于移除“编辑此页”链接。
           editUrl:
-            'https://github.com/TSGU-OSC/Tech-Docusaurus',
+            'https://github.com/TSGU-OSC/Tech-Docusaurus/tree/master/docs',
 
           // // 关闭文档相关检查3
           // remarkPlugins: [], // 清空 remark 插件
@@ -69,10 +87,14 @@ const config: Config = {
             xslt: true,
           },
           // Please change this to your repo.
+          // 请将此处修改为您的仓库。
           // Remove this to remove the "edit this page" links.
+          // 删除下方链接以用于移除“编辑此页”链接。
           editUrl:
-            'https://github.com/TSGU-OSC/Tech-Docusaurus',
+            'https://github.com/TSGU-OSC/Tech-Docusaurus/tree/master/docs',
           // Useful options to enforce blogging best practices
+          // 有助于强制执行博客最佳实践的有用选项
+          
 
           // 关闭文档相关检查4
           onInlineTags: 'ignore',
@@ -87,7 +109,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // 替换为您的专属社交卡片
+    // Replace it with your social card.
+    // 替换为您的专属社交卡片。
+    // image: 'img/docusaurus-social-card.jpg',
     // 格式：image: 'img/docusaurus-social-card.jpg',
 
     colorMode: {
@@ -114,7 +138,7 @@ const config: Config = {
           'aria-label': 'GitHub repository',
         },
         
-        // 侧边栏：排序 + 调整命名
+        // 侧边栏：排序 + 命名调整
         {
           type: 'doc',
           docId: 'Basic-Knowledge/1Overview',
@@ -169,38 +193,53 @@ const config: Config = {
           position: 'left',
           label: '其他',
         },
+        
+        // 博客
         // {to: '/blog', label: 'Blog', position: 'left'},
-        // {
-        //   href: 'https://github.com/TSGU-OSC/Tech-Docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
       ],
     },
     sidebar: {
-      // 侧边栏收起按钮
+      // 收起侧边栏按钮
       hideable: true,
     },
     footer: {
       style: 'dark',
       links: [
-        // 暂时不需要底部宣传字段
-        
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //   ],
-        // },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //   ],
-        // },
-        // {
-        //   title: 'More',
-        //   items: [
-        //   ],
-        // },
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Docusaurus 官方文档',
+              href: 'https://docusaurus.io/zh-CN/docs'
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'OpenHarmony 开源鸿蒙',
+              href: 'https://docs.openharmony.cn/pages/v6.0/zh-cn/OpenHarmony-Overview_zh.md'
+            },
+            {
+              label: 'Ascend 昇腾',
+              href: 'https://www.hiascend.com/zh/document'
+            },
+            {
+              label: 'RISC-V 开发者社区',
+              href: 'https://ruyisdk.cn/'
+            }
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: '社团官网',
+              href: 'https://osc.tsguas.cn',
+            }
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },

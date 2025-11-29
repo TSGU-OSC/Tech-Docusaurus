@@ -2,7 +2,8 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 
 const sidebars: SidebarsConfig = {
-  // 手动定义侧边栏，替换自动生成的结构
+  // 手动定义侧边栏:
+  // 替换自动生成的结构 + 指定排序
   tutorialSidebar: [
     'Overview',
 

@@ -30,7 +30,7 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 
 export default function HomepageFeatures(): ReactNode {
-  // 不需要特征说明，直接返回null停止渲染
+  // 不需要特征说明板块，直接返回null停止渲染
 
   // 返回null停止渲染
   return null;
