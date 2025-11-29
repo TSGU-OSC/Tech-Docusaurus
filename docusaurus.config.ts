@@ -9,7 +9,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const getBaseUrl = () => {
   // Vercel 自动化部署
   if(process.env.VERCEL) {
-    return 'https://osc.technicalDocs.cn';
+    return 'https://tech-docusaurus.vercel.app';
   }
   // 自有存储服务器部署
   if(process.env.NODE_ENV === 'production') {
