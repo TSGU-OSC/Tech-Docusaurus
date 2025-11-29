@@ -19,6 +19,10 @@ const getBaseUrl = () => {
   if(process.env.NODE_ENV === 'production') {
     return 'http://172.19.15.18:3000'
   }
+  // Cloudflare Pages 环境
+  if(process.env.CF_PAGES) {
+    return process.env.CF_PAGES_URL || 'https://Tech-Docusaurus.pages.dev'
+  }
   // 默认部署
   return 'http://localhost:3000'
 }

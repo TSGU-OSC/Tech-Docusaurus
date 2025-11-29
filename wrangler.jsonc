@@ -1,0 +1,8 @@
+{
+  "name": "tech-docusaurus",
+  "compatibility_date": "2025-11-29",
+  "assets": {
+    "directory": "./build",
+    "browser_ttl": 86400
+  }
+}
